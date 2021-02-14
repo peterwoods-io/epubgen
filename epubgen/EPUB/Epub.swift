@@ -8,15 +8,15 @@ import Foundation
  
  Additional files can be added to the metadata, but are not managed by an Epub-instance.
  */
-class Epub {
+public class Epub {
     
     // MARK: - Metadata
     
     let containerXml = ContainerXml(packageFilePath: "OEBPS/content.opf")
-    let contentOpf = ContentOpf()
+    public let contentOpf = ContentOpf()
     let tocXhtml = TocXhtml()
     
-    
+    public init() {}
     
     
     
@@ -35,7 +35,7 @@ class Epub {
      - Parameter xhtmlDocument: The XHTML-document to add to the EPUB.
      - Parameter tocTitle: If not nil, the entry is added to the toc.xhtml.
      */
-    func add(xhtmlDocument: XhtmlDocument, tocTitle: String?) {
+    public func add(xhtmlDocument: XhtmlDocument, tocTitle: String?) {
         let itemId = ContentOpf.createItemUUID()
         contentOpf.manifest.addItem(id: itemId, href: xhtmlDocument.filename, mediaType: MimeTypes.xhtml)
         contentOpf.spine.addItemref(idref: itemId)

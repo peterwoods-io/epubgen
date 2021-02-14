@@ -4,16 +4,16 @@ import Foundation
 
 
 
-class ContentOpfMetadata : XmlNodeConvertible {
+public class ContentOpfMetadata : XmlNodeConvertible {
     
-    var dcCreator = ""
-    var dcDescription = ""
-    var dcIdentifier = ""
-    var dcLanguage = ""
-    var dcRights = ""
-    var dcTitle = ""
-    var dcDate = ""
-    var coverItemRef = ""
+    public var dcCreator = ""
+    public var dcDescription = ""
+    public var dcIdentifier = ""
+    public var dcLanguage = ""
+    public var dcRights = ""
+    public var dcTitle = ""
+    public var dcDate = ""
+    public var coverItemRef = ""
     
     
     

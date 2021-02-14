@@ -4,10 +4,10 @@ import Foundation
 
 
 
-class ContentOpf : XmlDocumentConvertible {
+public class ContentOpf : XmlDocumentConvertible {
     
-    let metadata = ContentOpfMetadata()
-    let manifest = ContentOpfManifest()
+    public let metadata = ContentOpfMetadata()
+    public let manifest = ContentOpfManifest()
     let spine = ContentOpfSpine()
     
     
@@ -47,7 +47,7 @@ class ContentOpf : XmlDocumentConvertible {
 
 
 
-extension ContentOpf {
+public extension ContentOpf {
     
     static let uniqueIdentifier = "bookid"
     

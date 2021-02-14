@@ -4,7 +4,7 @@ import Foundation
 
 
 
-class ContentOpfManifest : XmlNodeConvertible {
+public class ContentOpfManifest : XmlNodeConvertible {
     
     fileprivate var items = [XMLNode]()
     
@@ -50,7 +50,7 @@ class ContentOpfManifest : XmlNodeConvertible {
      - Parameter href: The value for the href-attribtue.
      - Parameter mediaType: The value for the media-type-attribute
      */
-    func addNavItem(id: String, href: String, mediaType: String) {
+    public func addNavItem(id: String, href: String, mediaType: String) {
         let itemElement = XMLElement(name: "item",
                                      attributes: [XMLNode.attribute(name: "id", value: id),
                                                   XMLNode.attribute(name: "href", value: href),

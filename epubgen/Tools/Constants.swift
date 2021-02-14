@@ -4,7 +4,7 @@ import Foundation
 
 
 
-enum Constants {
-    static let bundleId = "de.drjackyl.epubgen"
-    static let version = "v0.1.6"
+public enum Constants {
+    public static let bundleId = "de.drjackyl.epubgen"
+    public static let version = "v0.1.6"
 }

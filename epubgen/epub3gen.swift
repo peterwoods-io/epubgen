@@ -4,11 +4,11 @@ import Foundation
 
 
 
-class epub3gen: epubgen {
+open class epub3gen: epubgen {
     
     // MARK: - Public
     
-    func generateEpub(withConfig configFileURL: URL, completion: @escaping () -> Void) {
+    public func generateEpub(withConfig configFileURL: URL, completion: @escaping () -> Void) {
         self.completion = completion
         self.sourceDirectory = configFileURL.deletingLastPathComponent()
         self.configFilename = configFileURL.lastPathComponent
@@ -25,7 +25,9 @@ class epub3gen: epubgen {
     }
     
     
-    
+    public init() {
+        
+    }
     
     
     // MARK: - Private

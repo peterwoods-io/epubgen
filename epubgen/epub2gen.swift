@@ -4,11 +4,11 @@ import Foundation
 
 
 
-class epub2gen: epubgen {
+open class epub2gen: epubgen {
     
     // MARK: - Public
     
-    func generateEpub(withConfig configFileURL: URL, completion: @escaping () -> Void) {
+    public func generateEpub(withConfig configFileURL: URL, completion: @escaping () -> Void) {
         self.completion = completion
         self.sourceDirectory = configFileURL.deletingLastPathComponent()
         self.configFilename = configFileURL.lastPathComponent
@@ -25,6 +25,9 @@ class epub2gen: epubgen {
     }
     
     
+    public init() {
+        
+    }
     
     
     

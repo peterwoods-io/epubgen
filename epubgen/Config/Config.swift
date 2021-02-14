@@ -10,7 +10,7 @@ import Foundation
  - Attention:
     Limitations: The keys can only contain \w, -, _ and .
  */
-class Config: CustomStringConvertible, CustomDebugStringConvertible {
+public class Config: CustomStringConvertible, CustomDebugStringConvertible {
     
     // MARK: Config-Properties
     

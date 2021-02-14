@@ -4,9 +4,9 @@ import Foundation
 
 
 
-class Help {
+public class Help {
     
-    class func printShortHelp(executableName: String) {
+    public class func printShortHelp(executableName: String) {
         var help = ""
         
         help += "usage:\n"
@@ -21,7 +21,7 @@ class Help {
         Output.printStdOut(message: help)
     }
     
-    class func printHelp(executableName: String) {
+    public class func printHelp(executableName: String) {
         var help = ""
         
         help += "usage:\n"

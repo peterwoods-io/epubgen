@@ -12,8 +12,8 @@ import Foundation
 
 
 
-class Output {
-    static func printStdOut(message: String, addNewLine shouldAddNewLine: Bool = true) {
+public class Output {
+    public static func printStdOut(message: String, addNewLine shouldAddNewLine: Bool = true) {
         var message = message
         
         if shouldAddNewLine {
@@ -27,7 +27,7 @@ class Output {
         FileHandle.standardOutput.write(data)
     }
     
-    static func printStdErr(message: String, addNewLine shouldAddNewLine: Bool = true) {
+    public static func printStdErr(message: String, addNewLine shouldAddNewLine: Bool = true) {
         var message = message
         
         if shouldAddNewLine {

@@ -7,7 +7,7 @@ import Foundation
 /**
  Capable of writing EPUB-data to the filesystem.
  */
-class EpubWriter {
+public class EpubWriter {
     
     /**
      Initialize the writer with the given Epub, destination and optionally files to include in the EPUB
@@ -26,7 +26,7 @@ class EpubWriter {
      - Parameter destination: The URL to write the EPUB to.
      - Parameter filesToInclude: Optional files to include in the EPUB.
      */
-    init(epub: Epub, destination: URL, filesToInclude: [EpubFileInclude] = [EpubFileInclude]()) {
+    public init(epub: Epub, destination: URL, filesToInclude: [EpubFileInclude] = [EpubFileInclude]()) {
         self.epub = epub
         self.destination = destination
         self.packageFolderUrl = destination.appendingPathComponent(epub.containerXml.packageFilePath).deletingLastPathComponent()
@@ -45,7 +45,7 @@ class EpubWriter {
      - Parameter completion: The completion-block being executed, when the write-operation has been completed.
      - Parameter error: Has a value if an error occurred.
      */
-    func write(completion: @escaping (_ error: Error?) -> Void) {
+    public func write(completion: @escaping (_ error: Error?) -> Void) {
         dispatchQueue.async {
             do {
                 try self.createEpubScaffolding()
@@ -134,7 +134,7 @@ class EpubWriter {
 /**
  Provides the url of a file to include in the EPUB at the given path in the package.
  */
-struct EpubFileInclude {
+public struct EpubFileInclude {
     
     /// The url of the file to include in the package.
     let fileUrl: URL
@@ -150,7 +150,7 @@ struct EpubFileInclude {
      - Parameter url: The URL of the file to include in the packge.
      - Parameter path: The path in the package to copy the file to.
      */
-    init(fileAt url: URL, pathInPackage path: String) {
+    public init(fileAt url: URL, pathInPackage path: String) {
         self.fileUrl = url
         self.pathInPackage = path
     }

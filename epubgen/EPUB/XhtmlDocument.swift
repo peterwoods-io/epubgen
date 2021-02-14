@@ -27,7 +27,7 @@ import Foundation
  <link rel="stylesheet" type="text/css" href="[path-to-css-file]" />
  ````
  */
-class XhtmlDocument: XmlDocumentConvertible {
+public class XhtmlDocument: XmlDocumentConvertible {
     
     // MARK: - Private Properties
     
@@ -41,7 +41,7 @@ class XhtmlDocument: XmlDocumentConvertible {
     
     // MARK: - Public Properties
     
-    let filename: String
+    public let filename: String
     
     
     
@@ -59,7 +59,7 @@ class XhtmlDocument: XmlDocumentConvertible {
      - Parameter styleHref: The string used as value for the href-value of a stylesheet-link-element.
      - Parameter body: The body-content.
      */
-    init(filename: String, title: String, styleHref: String?, body: String) {
+    public init(filename: String, title: String, styleHref: String?, body: String) {
         self.filename = filename
         self.title = title
         self.styleHref = styleHref

@@ -1,9 +1,9 @@
 /**
  Wrapper for packer-implementations
  */
-class Packer {
+public class Packer {
     
-    static let epub: ZipZapEpubPacker = ZipZapEpubPacker()
+    public static let epub: EpubPacker = ZipZapEpubPacker()
     
 }
 

@@ -1,4 +1,6 @@
-protocol EpubPacker {
+import Foundation
+
+public protocol EpubPacker {
     
     /**
      Packs the epub-package at the given packageUrl to the given destination-URL
