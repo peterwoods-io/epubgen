@@ -14,7 +14,7 @@ class TocXhtml : XmlDocumentConvertible {
     
     // MARK: - Public
     
-    var title = ""
+    var title = "Table of Contents"
     
     func addTocEntry(name: String, fileName: String) {
         let aElement = XMLElement(name: "a",
