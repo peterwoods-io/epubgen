@@ -3,7 +3,7 @@
  */
 public class Packer {
     
-    public static let epub: EpubPacker = ZipZapEpubPacker()
+    public static let epub: EpubPacker = ZIPFoundationEpubPacker()
     
 }
 

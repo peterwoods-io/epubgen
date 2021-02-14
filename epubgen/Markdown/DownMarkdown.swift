@@ -1,3 +1,6 @@
+import Foundation
+import Down
+
 /**
  A wrapper-class for the "Down" Markdown-renderer
  */

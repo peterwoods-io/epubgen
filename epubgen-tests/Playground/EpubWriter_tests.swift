@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import EPubGen
 
 class EpubWriter_tests: XCTestCase {
 
