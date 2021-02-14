@@ -75,13 +75,13 @@ public class EpubWriter {
     
     fileprivate func createEpubScaffolding() throws {
         let metaInfUrl = destination.appendingPathComponent("META-INF")
-        try fileIO.createDirectory(at: metaInfUrl, withIntermediateDirectories: false, attributes: [:])
+        try fileIO.createDirectory(at: metaInfUrl, withIntermediateDirectories: true, attributes: [:])
         
         let containerXmlUrl = metaInfUrl.appendingPathComponent("container.xml")
         let containerXmlData = epub.containerXml.convertToXmlDocument().xmlData(options: XMLNode.Options(rawValue: XMLNode.Options.RawValue(Int(XMLNode.Options.nodePrettyPrint.rawValue))))
         try containerXmlData.write(to: containerXmlUrl, options: Data.WritingOptions.atomic)
         
-        try fileIO.createDirectory(at: packageFolderUrl, withIntermediateDirectories: false, attributes: [:])
+        try fileIO.createDirectory(at: packageFolderUrl, withIntermediateDirectories: true, attributes: [:])
         
         let mimetypeUrl = destination.appendingPathComponent("mimetype")
         try "application/epub+zip".write(to: mimetypeUrl, atomically: true, encoding: String.Encoding.utf8)
